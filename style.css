@@ -1,0 +1,99 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: solid red 1px;
+}
+
+:root {
+	--azul-purpura: #4A3DA5;
+	--verde-lima: #B9D440;
+    --lavanda-pastel: #E9B7FF;
+
+    --primary-font: 'Poppins', sans-serif;
+    --secondary-font: 'Fira Code', monospace;
+
+    --font-h1: 2.5rem;
+	--font-h2: 2rem;
+	--font-h3: 1.5rem;
+	--font-p: 1rem;
+	--font-small: 0.875rem;
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--primary-font);
+    margin: 4%;
+    background-color: var(--azul-purpura);
+    color:white;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+a {
+    font-family: var(--secondary-font);
+    color: var(--verde-lima);
+    text-decoration: none;
+}
+
+img {
+    border-radius: 5%;
+}
+
+#menu {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+.logo {
+    max-width: 80px;
+}
+
+/* Sin flex, gap no funciona */
+#items-menu {
+    display: flex;
+    gap: 30px;
+}
+
+#bienvenida {
+    margin-top: 3%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 100px;
+    align-items: last baseline;
+
+}
+
+#saludo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#saludo p {
+    font-size: 2rem;
+    font-weight: 200;
+    line-height: 2.5rem;
+}
+
+#saludo h1 {
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 4.5rem;
+}
+
+#imagenBienvenida img {
+    max-width: 350px;
+}
+
+footer {
+    color: var(--azul-purpura);
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+}
+
+
+
