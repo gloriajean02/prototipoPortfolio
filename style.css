@@ -1,34 +1,44 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: solid red 1px;
+    /* outline: solid red 1px; */
 }
 
 :root {
-	--azul-purpura: #4A3DA5;
-	--verde-lima: #B9D440;
+    --azul-purpura: #4A3DA5;
+    --verde-lima: #B9D440;
     --lavanda-pastel: #E9B7FF;
 
     --primary-font: 'Poppins', sans-serif;
     --secondary-font: 'Fira Code', monospace;
 
     --font-h1: 2.5rem;
-	--font-h2: 2rem;
-	--font-h3: 1.5rem;
-	--font-p: 1rem;
-	--font-small: 0.875rem;
+    --font-h2: 2rem;
+    --font-h3: 1.5rem;
+    --font-p: 1rem;
+    --font-small: 0.875rem;
 }
 
 body {
     min-height: 100vh;
     font-family: var(--primary-font);
-    margin: 4%;
     background-color: var(--azul-purpura);
-    color:white;
+    color: white;
     display: grid;
     grid-template-rows: auto 1fr auto;
+    overflow-x: hidden;
+}
+
+header {
+    margin: 50px 80px 50px 80px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 80px;
+    gap: 100px;
 }
 
 a {
@@ -58,7 +68,6 @@ img {
 }
 
 #bienvenida {
-    margin-top: 3%;
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 100px;
@@ -88,12 +97,86 @@ img {
     max-width: 350px;
 }
 
+h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+h2::before {
+    content: "/* "
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: black;
+}
+
+.tituloSeccion {
+    padding-bottom: 20px;
+}
+
+.descripcionSeccion h3 {
+    max-width: 500px;
+    line-height: 2.5rem;
+    padding-bottom: 10px;
+}
+
+.descripcionSeccion p {
+    font-size: 1.3rem;
+    font-weight: 200;
+    max-width: 900;
+    padding-bottom: 10px;
+}
+
+.divProyectos {
+    color: black;
+    margin: 2% 0;
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+}
+
+.tarjeta {
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    border-radius: 15px;
+    gap: 10px;
+
+}
+
+#proyecto1 {
+    background-color: var(--verde-lima);
+}
+
+#proyecto2 {
+    background-color: var(--lavanda-pastel);
+}
+
+#proyecto3 {
+    background-color: white;
+}
+.flecha {
+    text-align: right;
+    padding-right: 5px;
+}
+.flecha img {
+    
+    max-width: 40px;
+}
+
 footer {
     color: var(--azul-purpura);
     margin-top: 20px;
     padding: 20px;
     background-color: white;
+    text-align: center;
 }
-
-
-
