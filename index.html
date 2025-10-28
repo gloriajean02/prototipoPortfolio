@@ -8,7 +8,9 @@
     <script src='script.js' defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -25,6 +27,7 @@
     </header>
 
     <main>
+
         <section id="bienvenida">
             <div id="saludo">
                 <p>¡Hola!<br>Soy Gloria</p>
@@ -34,13 +37,15 @@
                 <img src="imagenes/imagenBienvenida.jpg" alt="">
             </div>
         </section>
+
         <section id="proyectos">
             <div class="tituloSeccion">
                 <h2>Proyectos</h2>
             </div>
             <div class="descripcionSeccion">
                 <h3>Combino diseño, código y café para dar vida a tus ideas</h3>
-                <p>Diseño y desarrollo proyectos pensados para las personas. Me interesa tanto la experiencia visual como la estructura que la hace posible.</p>
+                <p>Diseño y desarrollo proyectos pensados para las personas. Me interesa tanto la experiencia visual
+                    como la estructura que la hace posible.</p>
             </div>
             <div class="divProyectos">
                 <div class="tarjeta" id="proyecto1">
@@ -49,7 +54,8 @@
                         <h3>FitCare</h3>
                     </div>
                     <div class="cuerpo">
-                        <p>Aplicación web para la gestión de citas, historiales y seguimiento de pacientes en una clínica de fisioterapia.</p>
+                        <p>Aplicación web para la gestión de citas, historiales y seguimiento de pacientes en una
+                            clínica de fisioterapia.</p>
                     </div>
                     <hr>
                     <div class="pie">
@@ -63,15 +69,16 @@
                 <div class="tarjeta" id="proyecto2">
                     <div class="titulo">
                         <p>PROYECTO</p>
-                        <h3>FitCare</h3>
+                        <h3>ArteVivo</h3>
                     </div>
                     <div class="cuerpo">
-                        <p>Aplicación web para la gestión de citas, historiales y seguimiento de pacientes en una clínica de fisioterapia.</p>
+                        <p>Plataforma interactiva que permite explorar obras de arte mediante animaciones SVG y
+                            microinteracciones.</p>
                     </div>
                     <hr>
                     <div class="pie">
-                        <p><strong>Clínica FisioBalance, 2025</strong></p>
-                        <p>HTML5. CSS3, JavaScript, PL/SQL, Oracle Database</p>
+                        <p><strong>Museo del Prado, 2024</strong></p>
+                        <p>JavaScript (DOM y eventos), CSS Animations, SVG, JSON</p>
                     </div>
                     <div class="flecha">
                         <img src="imagenes/flecha.png">
@@ -80,24 +87,76 @@
                 <div class="tarjeta" id="proyecto3">
                     <div class="titulo">
                         <p>PROYECTO</p>
-                        <h3>FitCare</h3>
+                        <h3>EcoMarket</h3>
                     </div>
                     <div class="cuerpo">
-                        <p>Aplicación web para la gestión de citas, historiales y seguimiento de pacientes en una clínica de fisioterapia.</p>
+                        <p>Tienda online de productos ecológicos con un enfoque en sostenibilidad y diseño accesible.
+                        </p>
                     </div>
                     <hr>
                     <div class="pie">
-                        <p><strong>Clínica FisioBalance, 2025</strong></p>
-                        <p>HTML5. CSS3, JavaScript, PL/SQL, Oracle Database</p>
-                        
+                        <p><strong>Cooperativa VerdeViva, 2023</strong></p>
+                        <p>HTML, CSS Grid/Flexbox, JavaScript (fetch API), PHP</p>
+
                     </div>
                     <div class="flecha">
                         <img src="imagenes/flecha.png">
                     </div>
                 </div>
             </div>
+            <div id="todosProyectos">
+                <a href="./">> Ver todos los proyectos</a>
+            </div>
         </section>
-    </main> 
+
+        <section id="sobreMi">
+            <div class="tituloSeccion">
+                <h2>Sobre mí</h2>
+            </div>
+            <div id="contenidoSobreMi">
+                <div class="imagenSeccion">
+                    <img src="imagenes/sobreMi.JPG">
+                </div>
+                <div class="descripcionSeccion">
+                    <h3>De la creatividad publicitaria al desarrollo web</h3>
+                    <p>Soy publicista y directora de arte, con experiencia en creación de contenido y estrategias
+                        digitales. Mi curiosidad por la tecnología me llevó a dar un nuevo rumbo a mi carrera: ahora me
+                        formo en Desarrollo de Aplicaciones Web, explorando el frontend y el backend. Visual Studio Code
+                        se ha unido a la suite de Adobe en mi día a día, y disfruto cada nuevo reto entre líneas de
+                        código.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <div class="cajaFormulario">
+                <h2>¿Hablamos?</h2>
+                <p>¿Tienes un proyecto en mente o quieres saber más sobre mi trabajo?<br> Hablemos. Me encantará conocer
+                    tu idea y ver cómo puedo ayudarte a hacerla realidad.</p>
+                <div class="formulario">
+                    <div class="campo">
+                        <label for="nombre">Nombre y apellidos</label>
+                        <input type="text" id="nombre" name="nombre">
+                    </div>
+                    <div class="campo">
+                        <label for="asunto">Asunto</label>
+                        <input type="text" id="asunto" name="asunto">
+                    </div>
+                    <div class="campo">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="campo">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje"></textarea>
+                    </div>
+                    <input type="submit" class="botonEnviar">
+                </div>
+
+            </div>
+        </section>
+
+    </main>
     <footer>
         <p>Gloria Curado García ©</p>
     </footer>
