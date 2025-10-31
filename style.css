@@ -269,18 +269,36 @@ a {
 }
 
 hr {
+    margin: 5px 0;
     border: none;
     height: 1px;
     background-color: black;
 }
 
-.flecha {
-    text-align: right;
-    padding-right: 5px;
+.botones {
+    margin-top:5px;
+    display: flex;
+    justify-content: space-between;
+
 }
 
-.flecha img {
+.botones img {
     max-width: 40px;
+}
+
+
+a img {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+
+a img:hover {
+    transform: scale(1.05);
+}
+
+#botonDisabled {
+    cursor: not-allowed;
 }
 
 #todosProyectos {
@@ -419,4 +437,8 @@ footer {
     background-color: white;
     text-align: center;
     font-size: 0.9rem;
+}
+
+span {
+    color:crimson;
 }
