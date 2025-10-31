@@ -1,3 +1,4 @@
+/* -------- RESET -------- */
 * {
     margin: 0;
     padding: 0;
@@ -5,17 +6,17 @@
     /* outline: solid red 1px; */
 }
 
+/* -------- VARIABLES -------- */
 :root {
-    --azul-purpura: #4A3DA5;
-    --verde-lima: #B9D440;
-    --lavanda-pastel: #E9B7FF;
+    --azul-purpura: #4a3da5;
+    --verde-lima: #b9d440;
+    --lavanda-pastel: #e9b7ff;
 
-    --primary-font: 'Poppins', sans-serif;
-    --secondary-font: 'Fira Code', monospace;
+    --primary-font: "Poppins", sans-serif;
+    --secondary-font: "Fira Code", monospace;
 }
 
-/* Estructura general */
-
+/* -------- ESTRUCTURA GENERAL -------- */
 body {
     min-height: 100vh;
     font-family: var(--primary-font);
@@ -23,22 +24,24 @@ body {
     color: white;
     display: grid;
     grid-template-rows: auto 1fr auto;
-    overflow-x: hidden; /* evita scroll horizontal */
+    overflow-x: hidden;
 }
 
-header, main {
-    max-width: 1200px;
+header,
+main {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+    padding: 1rem;
 }
 
 header {
-    margin: 50px 80px;
+    margin-top: 40px;
 }
 
 main {
-    margin: 0px 80px;
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    gap: 4rem;
 }
 
 h2 {
@@ -57,8 +60,16 @@ a {
     text-decoration: none;
 }
 
-/* Menú */
+@media (max-width: 768px) {
+    h2 {
+    font-size: 2rem;
+    }
 
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+/* -------- MENÚ -------- */
 #menu {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -66,47 +77,56 @@ a {
 }
 
 .logo {
-    max-width: 80px;
+    max-width: 5rem;
+}
+
+#logo-mobile {
+    display: none;
 }
 
 #items-menu {
     display: flex;
-    gap: 30px;
+    gap: 1.5rem;
 }
 
-/* Sección bienvenida */
-
-#bienvenida {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 50px;
-    align-items: last baseline;
+#menu-hamburguesa {
+    display: none;
 }
 
-#saludo {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+/* --- header adaptado --- */
+@media (max-width: 768px) {
+    header {
+        margin-top: 0px;
+    }
+
+    header#menu.navbar {
+        background-color: white;
+        color: var(--azul-purpura);
+    }
+
+    .navbar {
+        position: relative;
+    }
+
+    #logo-desktop {
+        display: none;
+    }
+    #logo-mobile {
+        display: block;
+        max-width: 4rem;
+    }
+
+    #menu-hamburguesa {
+        display: block;
+        max-width: 3rem;
+    }
+
+    #items-menu {
+        display: none;
+    } 
 }
 
-#saludo p {
-    font-size: 2rem;
-    font-weight: 200;
-    line-height: 2.5rem;
-}
-
-#saludo h1 {
-    font-size: 4rem;
-    font-weight: 400;
-    line-height: 4.5rem;
-}
-
-#imagenBienvenida img {
-    border-radius: 5%;
-    max-width: 100%;
-}
-
-/* General secciones */
+/* -------- GENERAL SECCIONES -------- */
 
 .tituloSeccion h2::before {
     content: "/* "
@@ -118,41 +138,135 @@ a {
 
 .descripcionSeccion h3 {
     max-width: 500px;
-    line-height: 2.5rem;
+    line-height: 35px;
     padding-bottom: 10px;
 }
 
 .descripcionSeccion p {
     font-size: 1.3rem;
     font-weight: 200;
-    max-width: 900;
+    max-width: 90%;
     padding-bottom: 10px;
 }
 
-/* Sección proyectos */
 
+/* -------- SECCIÓN BIENVENIDA -------- */
+#bienvenida {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    align-items: last baseline;
+    justify-content: space-between;
+}
+
+#saludo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#saludo p {
+    font-size: 2rem;
+    font-weight: 200;
+    line-height: 2.5rem;
+}
+
+#saludo h1 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 4rem;
+}
+
+#imagenBienvenida {
+    text-align: right;
+}
+
+#imagenBienvenida img {
+    border-radius: 5%;
+    max-width: 90%;
+}
+
+/* --- Responsive bienvenida --- */
+@media (max-width: 1024px) {
+    #bienvenida {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        gap: 0;
+        margin-top: 20px;
+    }
+
+    #imagenBienvenida {
+        text-align: center;
+    }
+
+    #imagenBienvenida img {
+        width: 70%;
+        margin: 0 auto;
+
+    }
+
+    #saludo {
+        position: relative;
+        top: -3rem;
+        z-index: 2;
+    }
+
+    #saludo p {
+        line-height: 2rem;
+    }
+
+    #saludo h1 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #saludo p {
+        font-size: 1.6rem;
+    }
+
+    #saludo h1 {
+        font-size: 2rem;
+    }
+}
+
+/* -------- SECCIÓN PROYECTOS -------- */
 .divProyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Ajusta según el espacio disponible */
+    gap: 2rem;
+    justify-content: center;
     color: black;
     margin: 2% 0;
-    display: grid;
-    grid-auto-flow: column;
-    gap: 5%;
-    justify-content: center;
+    box-sizing: border-box;
 }
 
 .tarjeta {
-    padding: 25px 20px;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
-    width: 350px;
-    border-radius: 15px;
-    gap: 10px;
-
+    width: 100%;
+    /* Ocupa el ancho de su columna */
+    max-width: 350px;
+    /* Máximo para que no se estire demasiado */
+    border-radius: 5%;
+    gap: 2px;
+    box-sizing: border-box;
 }
 
-#proyecto1 {background-color: var(--verde-lima);}
-#proyecto2 {background-color: var(--lavanda-pastel);}
-#proyecto3 {background-color: white;}
+#proyecto1 {
+    background-color: var(--verde-lima);
+}
+
+#proyecto2 {
+    background-color: var(--lavanda-pastel);
+}
+
+#proyecto3 {
+    background-color: white;
+}
 
 hr {
     border: none;
@@ -164,16 +278,34 @@ hr {
     text-align: right;
     padding-right: 5px;
 }
+
 .flecha img {
     max-width: 40px;
 }
 
 #todosProyectos {
     text-align: right;
+    margin-top: 1rem;
 }
 
-/* Sección sobre mí */
+/* --- Responsive proyectos --- */
+@media (max-width: 1024px) {
+    .divProyectos {
+        grid-auto-flow: row;
+        grid-template-columns: repeat(1, minmax(280px, 350px));
+        gap: 30px;
+    }
 
+    .tarjeta {
+        width: 100%;
+    }
+
+    #todosProyectos {
+        text-align: left;
+    }
+}
+
+/* -------- SECCIÓN SOBRE MÍ -------- */
 #contenidoSobreMi {
     display: flex;
     gap: 50px;
@@ -184,13 +316,28 @@ hr {
     max-width: 300px;
 }
 
-/* Sección contacto */
+/* --- Responsive sobre mí --- */
+@media (max-width: 900px) {
+    #contenidoSobreMi {
+        flex-direction: column;
+    }
 
+    .imagenSeccion img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        /* círculo perfecto */
+        object-fit: cover;
+        /* recorta la imagen para que encaje en el círculo */
+    }
+}
+
+/* -------- CONTACTO -------- */
 #contacto {
     background-color: var(--verde-lima);
-    padding: 50px 70px;
+    padding: 50px clamp(1rem, 6vw, 70px);
     border-radius: 20px;
-    color:black
+    color: black;
 }
 
 .cajaFormulario {
@@ -199,9 +346,6 @@ hr {
     gap: 20px;
 }
 
-.cajaFormulario p {
-    font-size: 1.3rem;
-}
 .formulario {
     display: flex;
     flex-direction: column;
@@ -210,9 +354,9 @@ hr {
 
 .campo {
     display: flex;
-    flex-direction: column; 
-    gap: 5px; 
-    width: 100%; 
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
 }
 
 label {
@@ -223,7 +367,7 @@ label {
 
 .campo input,
 .campo textarea {
-    width: 100%; 
+    width: 100%;
     padding: 10px;
     font-size: 1rem;
     border: 1px solid black;
@@ -236,16 +380,27 @@ label {
 
 .botonEnviar {
     font-family: var(--primary-font);
-    max-width: 100px;
+    width: 20%;
     height: 40px;
     background-color: black;
     border-radius: 5px;
     color: white;
-
+    cursor: pointer;
 }
 
-/* Footer */
+/* --- Responsive contacto --- */
+@media (max-width: 600px) {
+    #contacto {
+        padding: 60px 40px;
+    }
 
+    .botonEnviar {
+        width: 20%;
+        max-width: none;
+    }
+}
+
+/* -------- FOOTER -------- */
 .redesSociales {
     display: flex;
     gap: 35px;
@@ -263,5 +418,5 @@ footer {
     padding: 20px;
     background-color: white;
     text-align: center;
+    font-size: 0.9rem;
 }
-
