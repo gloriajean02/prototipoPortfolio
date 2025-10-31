@@ -34,11 +34,8 @@ main {
     padding: 1rem;
 }
 
-header {
-    margin-top: 40px;
-}
-
 main {
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     gap: 4rem;
@@ -71,9 +68,12 @@ a {
 }
 /* -------- MENÚ -------- */
 #menu {
+    position: fixed;
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
+    background-color: var(--azul-purpura);
+    width: 100%;
 }
 
 .logo {
